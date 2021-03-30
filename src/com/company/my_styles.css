@@ -1,0 +1,89 @@
+h1
+{
+    color: deepskyblue;
+    text-align: center;
+    stroke: black;
+    text-shadow: black 6px;
+    stroke-width: 4px;
+    background: pink;
+    font-size: 3.0em;
+    border-style: solid;
+    border-width: 0.2em;
+    padding: .35em;
+    border-color: cyan;
+}
+
+p
+{
+    color: black;
+    stroke: black;
+    text-shadow: black;
+    line-height: 25px;
+    font-style: italic;
+    text-indent: 15px;
+    font-size: 1.0em;
+}
+
+.pinkClass
+{
+    color: deeppink;
+}
+
+.myClass
+{
+    text-indent: 0em;
+    color: rebeccapurple;
+    font-size: 1.5em;
+    margin: 3em 3em 3em 3em;
+    border-style: solid;
+    border-thickness: 2em;
+    border-color: black;
+    padding: .25em;
+    background: lightgoldenrodyellow;
+}
+
+#myLine
+{
+    color: green;
+    text-decoration: underline;
+    font-size: 2.0em;
+}
+
+a:link
+{
+    color: cyan;
+    font-style: oblique;
+    text-decoration: none;
+}
+
+#myDivID
+{
+    background: cornflowerblue;
+    color: deeppink;
+    margin: .3em .3em .3em .3em;
+    padding: .8em;
+}
+
+.myFloatRight
+{
+    text-indent: 0em;
+    float: right;
+    width: 15em;
+    background: aquamarine;
+    color: deeppink;
+    border-color: cornflowerblue;
+    border-style: solid;
+    border-width: 1em;
+    padding: 1em;
+}
+
+.myUl li
+{
+    display: inline;
+    border-style: solid;
+    border-color: cornflowerblue;
+    color: deeppink;
+    background: aqua;
+    padding: 2em;
+    margin: 2em 2em 2em 2em ;
+}
