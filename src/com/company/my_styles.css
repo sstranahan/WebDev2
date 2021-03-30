@@ -79,6 +79,7 @@ a:link
 
 .myUl li
 {
+    align-items: center;
     display: inline;
     border-style: solid;
     border-color: cornflowerblue;
@@ -86,4 +87,9 @@ a:link
     background: aqua;
     padding: 2em;
     margin: 2em 2em 2em 2em ;
+}
+
+ul{
+    align-content: center;
+    align-items: center;
 }

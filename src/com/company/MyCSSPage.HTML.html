@@ -137,5 +137,55 @@
     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
     sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
+
+
+<script type="text/javascript">
+
+    //Comments
+
+    /* Multiline
+    *  Comments  */
+
+    var x;
+    x = 1;
+
+    var str;
+    str = "hello world";
+
+    var b = false;
+
+    n = str.length;
+
+    p = "The cat in the hat";
+    arr = p.split(' ');
+
+    console.log("x: " + x);
+    console.log("str: " + str);
+    console.log("b: " + b);
+    console.log("n: " + n);
+    console.log("p: " + p);
+    console.log("arr: " + arr);
+
+    function magnitude(x,y) {
+        var sum;   // local
+        p = 10;    // global
+
+        sum = x * x + y * y;
+
+        return Math.sqrt(sum);
+    }
+
+    var magVar;
+
+    magVar = magnitude(3, 4);
+
+    console.log("magVar: " + magVar);
+
+    console.log("p: " + p);
+
+</script>
+
+
+
 </body>
 </html>
