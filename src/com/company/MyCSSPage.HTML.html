@@ -139,6 +139,15 @@
 
 
 
+<!-- We'll print our javascript array here -->
+<!-- But lets do it using loops-->
+
+<table>
+    <td><img src="https://www-personal.umd.umich.edu/~babichj/me-150.jpg"></td>
+    <td><img src="https://www-personal.umd.umich.edu/~byteme/428/headshot.png"> </td>
+</table>
+
+
 <script type="text/javascript">
 
     //Comments
@@ -183,9 +192,164 @@
 
     console.log("p: " + p);
 
+    var x = new Object();
+    x.name = "Stephen";
+    x.zip = 48135;
+    x.citizen = true;
+    x.age = 33;
+
+    // or ...
+
+    var q = {name: "stephen", zip: 48135, citizen : true, age : 33};
+
+    console.log("x " + x.name + " " + x.zip + " " + x.citizen + " " + x.age);
+    console.log("q" + q);
+
+    // or ...
+
+    var sAge = q["age"];
+
+    console.log("sAge " + sAge);
+
+    var fieldName = "name";
+
+    var sName = q[fieldName];
+
+    console.log("sName " + sName);
+
+    var myObj = {first: "Stephen", last: "Stranahan", getFullName: f};
+
+    function f() {
+        return(this.first + " " + this.last);
+    }
+
+    fullName = myObj.getFullName();
+
+    // or ...
+
+    myObj.first = "Stephen";
+    myObj.last = "Stranahan";
+
+    myObj.getFullName = function() {
+        return(this.first + " " + this.last);
+    }
+
+    console.log("Fullname: " + myObj.getFullName());
+
+    // Arrays ----------
+    // Arrays can be of mixed type
+
+    A = new Array();
+
+    A[0] = 10;
+    A[1] = "Henlo";
+    A[2] = true;
+    A[3] = new Object();
+    A[3].name = "Bro";
+    A[3].age = 69;
+
+    B = [1, 2, "three"];
+
+    var n = A.length;
+
+    subArr = B.slice(0,1);
+    idx = B.indexOf(1);
+
+    B.push("pizzaTime");
+
+    var D = B.map(function(x) {     // Map will apply given function to all elements of array - original array is not muted - capture return array
+        return x*x;
+    })
+
+    // Two types of loops in javascript
+
+    for (let i = 0; i < 5; i++) {
+        // fooBar
+    }
+
+    // or ...
+
+    E = {pt1: "one", pt2: "two", pt3: "three"};
+
+    console.log("\n\n\nObject E:");
+    for(p in E) {   // Iterates through properties of object
+        console.log("\n" + p + ": " + E[p]);
+    }
+
+
+    obj1 = {x: 25.0, y: 76.9};
+    str="obj1";
+
+    function dispProps(obj, str) {
+        console.log("Javascript object: " + str + "-----------------------\n");
+        for(p in obj) {
+            console.log("\n" + p + ": " + obj[p]);
+        }
+    }
+
+    dispProps(obj1, str);
+
+    // 2D arrays
+
+
+    M = new Array();
+
+    for (let i = 0; i < 5; i++) {
+        M[i] = new Array();
+    }
+
+    for (let i = 0; i < 5; i++) {
+        for (let j = 0; j < 3; j++) {
+            M[i][j] = Math.floor(100*Math.random());
+        }
+    }
+
+    console.log(M.toString());
+
+
+    // Can't read local files in javascript. Has to be hardcoded in - we could read from a file serverside however
+    str = [
+
+        "Jacob,Babich,https://www-personal.umd.umich.edu/~babichj/me-150.jpg",
+        "Justin,Marentette,https://www-personal.umd.umich.edu/~byteme/428/headshot.png",
+        "Kelsey,Gilkey,https://www-personal.umd.umich.edu/~kgilkey/428/KG428.png",
+        "Josh,Pereli,http://www-personal.umd.umich.edu/~jpereli/435/images/JoshPereli150x150.png",
+        "Noah,Grochulski,http://www-personal.umd.umich.edu/~ngrochul/images/myImage.jpg",
+        "Joseph,Samulski,https://www-personal.umd.umich.edu/~jsamulsk/Courses/435/images/my-face.png",
+        "Lexi,Adams,https://www-personal.umd.umich.edu/~adamsea/428/images/selfie.jpg",
+        "Alexander,Cupps,https://www-personal.umd.umich.edu/~acupps/435/me.jpg",
+        "Gith,Almouseli,https://www-personal.umd.umich.edu/~galmouse/me.jpg",
+        "Thomas,Renault,http://www-personal.umd.umich.edu/~trenault/435/trenault150.jpg",
+        "Stephen,Stranahan,https://www-personal.umd.umich.edu/~sstran/images/SAS_IMAGE_150X150.jpg",
+        "Kositz,Alexander,https://www-personal.umd.umich.edu/~akositz/image.jpg",
+        "Maya,Hamka,https://www-personal.umd.umich.edu/~mihamka/435/meee.png",
+        "Hafeez,Oyeneyin,http://www-personal.umd.umich.edu/~hoyeneyi/me.jpg"
+
+    ];
+
+    tableStr = "<table>";
+
+    for (let i = 0; i < str.size ; i++) {
+        tableStr += "\n<tr>";
+        for (let j = 0; j < 3; j++) {
+            tableStr+="<td>" +  + "</td>"
+        }
+        tableStr += "\n</tr>";
+    }
+
+
+
+
+    tableStr += "</table>";
+
 </script>
 
 
 
+
 </body>
+
+
+
+
 </html>
